@@ -16,8 +16,7 @@ class clientes extends Model
         'CorreoElectronico',
         'Telefono',
         'Direccion',
-        'IDVehiculo',
-        // Otros campos aquí
+        'DUI', 
     ];
 
     // Ejemplo de relación: Un cliente tiene muchas ventas

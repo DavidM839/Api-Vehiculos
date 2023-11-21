@@ -9,7 +9,7 @@ class VentaController extends Controller
 {
     public function index()
     {
-        $ventas = ventas::all();
+        $ventas = Ventas::with('cliente', 'vehiculo')->get(); // Carga las relaciones cliente y vehiculo
         return response()->json($ventas, 200);
     }
 

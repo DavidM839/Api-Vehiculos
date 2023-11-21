@@ -18,9 +18,7 @@ class vehiculos extends Model
         'precio',
         'tipoVehiculo',
         'estado',
-        // Otros campos aquí
     ];
-
     // Ejemplo de relación: Un vehículo pertenece a muchas ventas
     public function ventas()
     {

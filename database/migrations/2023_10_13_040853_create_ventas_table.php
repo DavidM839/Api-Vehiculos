@@ -11,15 +11,13 @@ class CreateVentasTable extends Migration
             $table->id();
             $table->unsignedBigInteger('IDVehiculo');
             $table->unsignedBigInteger('IDCliente');
-            $table->date('FechaVenta');
-            $table->decimal('PrecioVenta', 10, 2);
+            $table->date('FechaVenta')->useCurrent(); // Utiliza la fecha del sistema por defecto
             $table->string('MetodoPago');
             $table->timestamps();
-
             $table->foreign('IDVehiculo')->references('id')->on('vehiculos')->onDelete('cascade');
             $table->foreign('IDCliente')->references('id')->on('clientes')->onDelete('cascade');
         });
-    }
+    }    
 
     public function down()
     {
